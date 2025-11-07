@@ -1,12 +1,31 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-main',
-  imports: [ CommonModule ],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './main.html',
   styleUrl: './main.css',
 })
-export class Main {
+export class Main implements OnInit {
+
+  aluno: string = "Goncalo Matos";
+
+  ngOnInit(): void {
+  this.definirProblemas();
+
+}
+
+
+definirProblemas():void {
+  this.aluno;
+  let aluno: string = "Goncalo";
+  console.log("This.aluno ",this.aluno);
+  console.log("This.aluno ", aluno);
+
+
+
+}
 
 }
